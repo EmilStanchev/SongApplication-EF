@@ -10,11 +10,13 @@ namespace Services.Services
     public class SongCrudOperations : ISongCrudOperations
     {
         private readonly ApplicationDbContext context;
+        private readonly IMapper mapper;
         private IPrintMessage _message;
-        public SongCrudOperations(ApplicationDbContext applicationDbContext, IPrintMessage message)
+        public SongCrudOperations(ApplicationDbContext applicationDbContext, IPrintMessage message, IMapper mapper)
         {
-            context = applicationDbContext;
-            _message = message;
+            this.context = applicationDbContext;
+            this._message = message;
+            this.mapper = mapper;
         }
 
         public string AddSong(AddSongViewModel song)
@@ -53,11 +55,6 @@ namespace Services.Services
 
         public List<SongViewModel> GetAll()
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Song, SongViewModel>();
-            });
-            var mapper = config.CreateMapper();
             var songs = context.Songs.Select(s => s).ToList();
             var result = mapper.Map<List<SongViewModel>>(songs);
             return result;
@@ -65,7 +62,10 @@ namespace Services.Services
 
         public SongViewModel GetById(string id)
         {
-            throw new NotImplementedException();
+            var song = context.Songs.SingleOrDefault(s => s.Id == id);
+            var result = mapper.Map<SongViewModel>(song);
+            return result;
+
         }
 
         public void UpdateSong(AddSongViewModel song)

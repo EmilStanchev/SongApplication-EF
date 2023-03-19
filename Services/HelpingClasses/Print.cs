@@ -26,5 +26,16 @@ namespace Services.HelpingClasses
                 return "Success";
             }
         }
+        public string CheckNullMessageForSingleItem(Object item)
+        {
+            if (item == null)
+            {
+                return "Invalid song id";
+            }
+            else
+            {
+                return "Success";
+            }
+        }
     }
 }

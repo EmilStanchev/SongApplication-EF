@@ -6,18 +6,18 @@ namespace SongApplication.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
-        public ApplicationDbContext()
-        : base()
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
         {
         }
         public DbSet<Song> Songs { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(@"Server=DESKTOP-LJHRUSL\SQLEXPRESS;Database=SongApplicationEntity;Trusted_Connection=True;TrustServerCertificate=True;");
-            }
-        }
+        /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+         {
+             if (!optionsBuilder.IsConfigured)
+             {
+                 optionsBuilder.UseSqlServer(@"Server=DESKTOP-LJHRUSL\SQLEXPRESS;Database=SongApplicationEntity;Trusted_Connection=True;TrustServerCertificate=True;");
+             }
+         }*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
