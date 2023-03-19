@@ -15,7 +15,7 @@ namespace SongCrudOperationsTest
                 .UseInMemoryDatabase(databaseName: "MyAppTestDatabase")
                 .Options;
 
-            _context = new ApplicationDbContext(options);
+            //    _context = new ApplicationDbContext(options);
         }
         [Fact]
         public void Test_Get_All_Songs_Should_Return_Success()
