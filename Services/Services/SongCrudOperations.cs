@@ -63,6 +63,10 @@ namespace Services.Services
         public SongViewModel GetById(string id)
         {
             var song = context.Songs.SingleOrDefault(s => s.Id == id);
+            if (song == null)
+            {
+                return null;
+            }
             var result = mapper.Map<SongViewModel>(song);
             return result;
 

@@ -83,6 +83,7 @@ namespace SongCrudOperationsTest
             // Assert
             Assert.Equal("Success", result);
         }
+        [Fact]
         public void Test_Get_Song_By_Id_Should_Return_InvalidSongId()
         {
             //Arange 
