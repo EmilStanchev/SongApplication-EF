@@ -29,6 +29,7 @@ namespace Services.Services
                     Duration = song.Duration,
                     ReleaseDate = song.ReleaseDate,
                 };
+                Console.WriteLine(dbSong.Id);
                 context.Songs.Add(dbSong);
                 int res = context.SaveChanges();
                 return _message.Message(res);
@@ -74,7 +75,9 @@ namespace Services.Services
 
         public void UpdateSong(AddSongViewModel song)
         {
-            throw new NotImplementedException();
+            var dbSong = mapper.Map<Song>(song);
+            context.Songs.Update(dbSong);
+            context.SaveChanges();
         }
     }
 }

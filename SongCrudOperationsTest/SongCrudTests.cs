@@ -63,7 +63,7 @@ namespace SongCrudOperationsTest
         {
             //Arange 
 
-            var songCrudOperationsService = CreateServiceWithRealDb();
+            var songCrudOperationsService = CreateService();
             // Act
             var songs = songCrudOperationsService.GetAll();
             var result = print.CheckingNullMessage(songs);
@@ -88,7 +88,7 @@ namespace SongCrudOperationsTest
         {
             //Arange 
 
-            var songCrudOperationsService = CreateServiceWithRealDb();
+            var songCrudOperationsService = CreateService();
             var songId = "55";
             // Act
             var song = songCrudOperationsService.GetById(songId);
@@ -102,7 +102,6 @@ namespace SongCrudOperationsTest
            .UseInMemoryDatabase(databaseName: "SongDatabase")
            .Options;
             ApplicationDbContext dbContext = new ApplicationDbContext(options);
-
             IPrintMessage print = new Print();
             IConfigurationProvider configuration = new MapperConfiguration(x =>
             {
