@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qVWpjcaFmkkoeW/2i/4Jl4pqdS2xfU4hdvtrqTM22U4+yMbfzIgn7NJGZo9d/G7C9g+eiR7pwGnZyX/sdp9DZA==",
+  "dgSpecHash": "BFIyKzP4IMve/rIazUL/uTYvuCDHds3n2QyAYkM+QG9MNM35AKX89xp03RwB5SDiGTtd2OPxiBNMS4KfO/iOkw==",
   "success": true,
   "projectFilePath": "D:\\Vtu- Software engineering\\C# ASP.NET\\SongApplicationEntity\\SongCrudOperationsTest\\SongCrudOperationsTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\0xid\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\0xid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\0xid\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\0xid\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\0xid\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongApplication.Models", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongApplication.Infrastructure", "SongApplication.Infrastructure\SongApplication.Infrastructure.csproj", "{539B6389-9FD4-44FD-A312-E71FAA076D8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{EA360AC1-A7B4-4CC0-B91C-801BA1D9E5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{EA360AC1-A7B4-4CC0-B91C-801BA1D9E5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongCrudOperationsTest", "SongCrudOperationsTest\SongCrudOperationsTest.csproj", "{0F89C5BC-4CEA-4C85-BD8B-1E72B3068706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongCrudOperationsTest", "SongCrudOperationsTest\SongCrudOperationsTest.csproj", "{0F89C5BC-4CEA-4C85-BD8B-1E72B3068706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongApplication", "SongApplication\SongApplication.csproj", "{1920AC8C-61AE-4827-9A0C-656539ED62F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0F89C5BC-4CEA-4C85-BD8B-1E72B3068706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F89C5BC-4CEA-4C85-BD8B-1E72B3068706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F89C5BC-4CEA-4C85-BD8B-1E72B3068706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1920AC8C-61AE-4827-9A0C-656539ED62F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1920AC8C-61AE-4827-9A0C-656539ED62F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1920AC8C-61AE-4827-9A0C-656539ED62F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1920AC8C-61AE-4827-9A0C-656539ED62F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
